@@ -14,6 +14,8 @@ const Search = () => {
   const [input, setInput] = useState("");
   const [movie, setMovie] = useState([]);
 
+  console.log(movie)
+
   const handleChange = e => {
     setInput(e.target.value);
   };
@@ -34,7 +36,7 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div className='app'>
       <h1 className="title">Movie Search App!</h1>
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="query" className="label">
@@ -53,8 +55,7 @@ const Search = () => {
         </button>
       </form>
       <div className="display">
-        {movie
-          .filter(item => item.poster_path)
+        {movie      
           .map(item => (
             <CardDisplay item={item} key={item.id} />
           ))}
