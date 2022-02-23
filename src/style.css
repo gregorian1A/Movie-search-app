@@ -108,7 +108,12 @@ small {
   font-family: helvetica;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 749px) {
+  .app {
+    margin: 0 auto;
+    width: 90%;
+  }
+
   .card {
     display: flex;
     flex-direction: column;
